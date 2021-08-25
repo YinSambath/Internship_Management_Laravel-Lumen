@@ -23,6 +23,9 @@ class CreateInternshipsTable extends Migration
             $table->integer('student_id')->nullable();
             // $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->integer('academic_year_id')->nullable();
+            $table->integer('department_id')->nullable();
+            $table->integer('degree_id')->nullable();
+            $table->integer('grade_id')->nullable();
             // $table->foreign('academic_year_id')->references('id')->on('academic_years')->onDelete('cascade');
             $table->integer('company_id')->nullable();
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');

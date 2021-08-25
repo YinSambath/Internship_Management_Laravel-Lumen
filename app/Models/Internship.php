@@ -15,7 +15,10 @@ class Internship extends Model
         'end_date', 
         'issue_date',
         'academic_year_id',
-        'student_id'
+        'student_id',
+        'degree_id',
+        'department_id',
+        'grade_id'
     ];
 
 

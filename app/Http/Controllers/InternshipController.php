@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Exports\InternshipExport;
 use App\Services\InternshipServices\InternshipService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\BaseController;
+use App\Models\Internship;
+use Maatwebsite\Excel\Facades\Excel;
 
 class InternshipController extends BaseController
 {
@@ -48,6 +50,10 @@ class InternshipController extends BaseController
     public function view($id) 
     {
         return parent::view($id);
+    }
+
+    public function export() {
+        return Excel::download(new InternshipExport, 'internshipExport.csv');
     }
 
     

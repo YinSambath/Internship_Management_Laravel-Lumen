@@ -14,5 +14,6 @@ class CompanyService extends BaseService
     public function all() {
         return $this->model->all();
     }
- 
 }
+
+

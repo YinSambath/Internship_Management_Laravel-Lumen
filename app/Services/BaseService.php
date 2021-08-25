@@ -17,6 +17,15 @@ class BaseService
         if(isset(request()->academic_year_id)) {
             $arrays = $arrays->where('academic_year_id', request()->academic_year_id);
         }
+        if(isset(request()->department_id)) {
+            $arrays = $arrays->where('department_id', request()->department_id);
+        }
+        if(isset(request()->degree_id)) {
+            $arrays = $arrays->where('degree_id', request()->degree_id);
+        }
+        if(isset(request()->grade_id)) {
+            $arrays = $arrays->where('grade_id', request()->grade_id);
+        }
         // filter by person_name
         // if(isset(request()->search)) {
         //     $arrays = $arrays->where('person_name', request()->search);
